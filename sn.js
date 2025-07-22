@@ -22,7 +22,7 @@ function clearCode() {
 function checkCode() {
   const errorMessage = document.getElementById("error-message");
   if (code === correctCode) {
-    window.location.href = "index.html";
+    window.location.href = "trang1.html";
   } else {
     errorMessage.textContent = "Em quên ngày sinh mình rồi kìa :))";
     errorMessage.classList.add("shake");
