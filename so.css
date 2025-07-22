@@ -1,0 +1,132 @@
+/* Nền video */
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay làm mờ chung */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container chia 2 bên */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+/* Ảnh bên trái */
+.illustration {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Khung nhập mã */
+.code-box {
+  
+  background-color: rgba(255, 255, 255, 0.2); /* Mờ */
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dot hiển thị mã */
+#dots {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#dots span {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#dots span.active {
+  opacity: 1;
+  background: white !important;
+  box-shadow: none !important;
+}
+
+#error-message {
+  color: rgb(64, 64, 243);
+  font-size: 16px;
+  margin-top: 10px;
+  height: 20px; /* giữ vị trí khi chưa có lỗi */
+  transition: all 0.3s ease;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+#error-message.shake {
+  animation: shake 0.3s ease;
+}
+
+
+
+/* Keypad số */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 15px;
+}
+
+.keypad button {
+  padding: 15px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  transition: background 0.3s;
+}
+
+.keypad button:hover {
+  background: rgba(255,255,255,0.4);
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .illustration {
+    width: 80%;
+    height: auto;
+  }
+
+  .code-box {
+    width: 90%;
+  }
+}
+

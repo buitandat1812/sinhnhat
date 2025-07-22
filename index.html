@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhập Mật Mã</title>
+  <link rel="stylesheet" href="so.css">
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="sn.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay">
+    <div class="container">
+      <!-- Hình minh hoạ -->
+      <img src="4.jpg" class="illustration" alt="Hình minh hoạ">
+
+
+      <!-- Bảng nhập mã -->
+      <div class="code-box">
+        <h2>Nhập ngày sinh của em ❤</h2>
+        <div id="dots">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+       <p id="error-message" class="error-message"></p>
+        <div class="keypad">
+          <button onclick="press('1')">1</button>
+          <button onclick="press('2')">2</button>
+          <button onclick="press('3')">3</button>
+          <button onclick="press('4')">4</button>
+          <button onclick="press('5')">5</button>
+          <button onclick="press('6')">6</button>
+          <button onclick="press('7')">7</button>
+          <button onclick="press('8')">8</button>
+          <button onclick="press('9')">9</button>
+          <button onclick="clearCode()">C</button>
+          <button onclick="press('0')">0</button>
+          <button onclick="checkCode()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="sn.js"></script>
+</body>
+</html>

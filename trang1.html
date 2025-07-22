@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chúc mừng sinh nhật</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @media screen and (orientation: portrait) {
+  body::before {
+    content: "Hãy xoay ngang màn hình để xem hiệu ứng đẹp hơn 😊";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    z-index: 9999;
+    text-align: center;
+  }
+
+  canvas {
+    display: none !important;
+  }
+}
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #mainCanvas {
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="haruharu.mp4" type="audio/mpeg">
+  </audio>
+
+  <!-- 🎨 Canvas nền Matrix -->
+ <canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; z-index: -2;"></canvas>
+  <canvas id="mainCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
