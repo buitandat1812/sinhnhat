@@ -40,12 +40,12 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const messages = [
-  { text: "3", color:"#00bfff", font: "bold 20vw Times New Roman"  },
-  { text: "2", color: "#00bfff", font: "bold 20vw Times New Roman" },
-  { text: "1", color:"#00bfff", font: "bold 20vw Times New Roman"},
-  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 6vw Times New Roman" },
-  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 7vw Times New Roman" },
-  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 6vw Times New Roman" }
+  { text: "3", color:"#00bfff", font: "bold 90px Times New Roman"  },
+  { text: "2", color: "#00bfff", font: "bold 90px  Times New Roman" },
+  { text: "1", color:"#00bfff", font: "bold 90px  Times New Roman"},
+  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 90px  Times New Roman" },
+  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 90px  Times New Roman" },
+  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 90px Times New Roman" }
 ];
 
 let particles = [];
