@@ -195,6 +195,32 @@
         font-size: 1.4em;
       }
     }
+    /* ==== Mobile portrait & very small screens ==== */
+@media (max-width: 768px) and (orientation: portrait),
+       (max-width: 480px)  {          /* <= iPhone SE, v.v. */
+  .image-row {
+    /* luôn sát đáy, toàn màn hình, không quấn dòng */
+    position: fixed;          /* tách hẳn khỏi layout bánh kem */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: nowrap;        /* cấm xuống dòng */
+    gap: 8px;
+    overflow-x: auto;         /* nếu còn quá hẹp thì cho cuộn ngang */
+    padding: 0 10px;
+    z-index: 10;
+  }
+
+  /* Tỷ lệ ~22 vw × auto giúp vừa 4 ảnh trên 1 hàng */
+  .image-row img {
+    width: 22vw;              /* ≈ 4×22 = 88 vw → vừa khít */
+    height: auto;             /* giữ nguyên tỉ lệ */
+    border-radius: 12px;
+    flex: 0 0 auto;           /* ngăn co giãn làm méo */
+  }
+}
+
   </style>
 </head>
 
