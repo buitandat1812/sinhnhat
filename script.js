@@ -3,6 +3,12 @@ const matrixCanvas = document.getElementById('matrixCanvas');
 const mCtx = matrixCanvas.getContext('2d');
 matrixCanvas.width = window.innerWidth;
 matrixCanvas.height = window.innerHeight;
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  matrixCanvas.width = window.innerWidth;
+  matrixCanvas.height = window.innerHeight;
+});
 
 const letters = 'アァイイウエカキクケコサシスセソ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const fontSize = 14;
@@ -33,13 +39,12 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const messages = [
-  { text: "3", color:"#00bfff", font: "bold 500px Times New Roman"  },
-  { text: "2", color: "#00bfff", font: "bold 500px Times New Roman" },
-  { text: "1", color:"#00bfff", font: "bold 500px Times New Roman"},
-  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 80px Times New Roman" },
-  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 90px Times New Roman" },
-  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 80px Times New Roman" }
-
+  { text: "3", color:"#00bfff", font: "bold 20vw Times New Roman"  },
+  { text: "2", color: "#00bfff", font: "bold 20vw Times New Roman" },
+  { text: "1", color:"#00bfff", font: "bold 20vw Times New Roman"},
+  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 6vw Times New Roman" },
+  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 7vw Times New Roman" },
+  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 6vw Times New Roman" }
 ];
 
 let particles = [];
@@ -57,7 +62,8 @@ function createParticlesForMessage(index) {
   const offCtx = offCanvas.getContext('2d');
 
   const msg = messages[index];
-  const yPos = canvas.height / 2;
+  const yPos = canvas.height / 2 + parseInt(msg.font) / 3; // dịch xuống một chút
+
 
   offCtx.fillStyle = msg.color;
   offCtx.font = msg.font;
