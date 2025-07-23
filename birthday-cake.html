@@ -120,11 +120,7 @@
             transition: transform 0.3s ease;
             flex-shrink: 0;
         }
-        /* Giải pháp: Tạo khoảng đệm sau bánh để ảnh không tràn lên */
-.spacer {
-    height: 100px; /* hoặc 150px nếu cần thêm */
-    width: 100%;
-}
+       
 
 /* Có thể chỉ áp dụng cho mobile */
 @media only screen and (max-width: 768px) {
@@ -187,10 +183,10 @@
                 height: auto; /* Adjust height proportionally */
             }
 
-            .cake { /* Candle */
-                top: 150px; /* Adjust candle position relative to the smaller cake */
-                height: 25px; /* Smaller candle */
-            }
+            .cake {
+    transform: translateY(-150px); /* Đẩy lên ít hơn trên mobile */
+    scale: 0.8; /* có thể thu nhỏ lại cho vừa màn hình */
+  }
 
             .fuego { /* Fire */
                 top: -15px; /* Adjust fire position */
@@ -435,7 +431,7 @@
         </path>
         <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
-<div class="spacer"></div>
+
 
     <div class="text">
         <h1>Chúc mừng sinh nhật em nhé</h1>
