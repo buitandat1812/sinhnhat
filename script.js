@@ -4,12 +4,6 @@ const mCtx = matrixCanvas.getContext('2d');
 matrixCanvas.width = window.innerWidth;
 matrixCanvas.height = window.innerHeight;
 
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  matrixCanvas.width = window.innerWidth;
-  matrixCanvas.height = window.innerHeight;
-});
 
 const letters = 'アァイイウエカキクケコサシスセソ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const fontSize = 14;
