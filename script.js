@@ -3,6 +3,7 @@ const matrixCanvas = document.getElementById('matrixCanvas');
 const mCtx = matrixCanvas.getContext('2d');
 matrixCanvas.width = window.innerWidth;
 matrixCanvas.height = window.innerHeight;
+
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -62,8 +63,7 @@ function createParticlesForMessage(index) {
   const offCtx = offCanvas.getContext('2d');
 
   const msg = messages[index];
-  const yPos = canvas.height / 2 + parseInt(msg.font) / 3; // dịch xuống một chút
-
+  const yPos = canvas.height / 2;
 
   offCtx.fillStyle = msg.color;
   offCtx.font = msg.font;
