@@ -37,8 +37,8 @@ const messages = [
   { text: "3", color:"#00bfff", font: "bold 200px Times New Roman"  },
   { text: "2", color: "#00bfff", font: "bold 200px  Times New Roman" },
   { text: "1", color:"#00bfff", font: "bold 200px  Times New Roman"},
-  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 80px  Times New Roman" },
-  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 80px  Times New Roman" },
+  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 65px  Times New Roman" },
+  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 65px  Times New Roman" },
   { text: "Ước gì sẽ được đó", color: "#00bfff", font: "bold 80px Times New Roman" }
 ];
 
@@ -120,7 +120,7 @@ function animateParticles() {
       waitStartTime = performance.now();
     }
   } else if (state === "waiting") {
-    if (performance.now() - waitStartTime >= 3000) {
+    if (performance.now() - waitStartTime >= 2100) {
       state = "dispersing";
       timer = 0;
     }
