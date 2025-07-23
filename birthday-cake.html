@@ -49,7 +49,6 @@
             display: block;
             position: relative; /* Changed to relative for better flow on mobile */
             margin: -10em auto 0 auto; /* Keep original margin for desktop, override in media query */
-            /* The top: 228px was for the candle, not the SVG itself, removed here to avoid confusion */
         }
 
         /* Candle styling */
@@ -217,6 +216,56 @@
             }
         }
 
+        /* Specific adjustments for Landscape orientation on mobile (max-width: 768px) */
+        @media only screen and (max-width: 768px) and (orientation: landscape) {
+            body {
+                padding-top: 10px; /* Reduce top padding */
+                padding-bottom: 10px; /* Reduce bottom padding */
+            }
+
+            #cake {
+                margin-top: 20px; /* Reduce top margin for less vertical space */
+                margin-bottom: 10px; /* Reduce bottom margin */
+                width: 120px; /* Make cake even smaller in landscape */
+            }
+
+            .cake { /* Candle */
+                top: 120px; /* Adjust candle position relative to smaller cake */
+                height: 20px; /* Smaller candle */
+            }
+
+            .fuego { /* Fire */
+                top: -12px; /* Adjust fire position */
+                width: 4px;
+                height: 12px;
+            }
+
+            .text {
+                margin-top: 10px; /* Reduce margin above text */
+                font-size: 0.9em; /* Slightly smaller text */
+            }
+
+            .text h1 {
+                font-size: 1.2em; /* Smaller heading in landscape */
+            }
+
+            .name {
+                font-size: 20px; /* Smaller name font size */
+            }
+
+            .image-row {
+                margin-top: 15px; /* Adjust margin to ensure it's below the text */
+                padding-bottom: 10px; /* Ensure space below images */
+            }
+
+            .image-row img {
+                width: 150px; /* Make images smaller in landscape */
+                height: 160px; /* Adjust height to maintain aspect ratio, or set a fixed height if desired */
+                border-radius: 10px; /* Slightly smaller border radius */
+            }
+        }
+
+
         /* Animation for fire */
         @keyframes fuego {
 
@@ -248,10 +297,6 @@
             font-style: italic;
             text-align: center;
             z-index: 1; /* Ensure text is above cake SVG if any overlap */
-        }
-
-        .text h1 {
-            font-size: 1.4em;
         }
     </style>
 </head>
