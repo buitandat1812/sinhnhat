@@ -120,6 +120,19 @@
             transition: transform 0.3s ease;
             flex-shrink: 0;
         }
+        /* Giải pháp: Tạo khoảng đệm sau bánh để ảnh không tràn lên */
+.spacer {
+    height: 100px; /* hoặc 150px nếu cần thêm */
+    width: 100%;
+}
+
+/* Có thể chỉ áp dụng cho mobile */
+@media only screen and (max-width: 768px) {
+    .spacer {
+        height: 150px;
+    }
+}
+
 
         .image-row img:hover {
             transform: scale(1.1);
@@ -422,6 +435,8 @@
         </path>
         <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
     </svg>
+<div class="spacer"></div>
+
     <div class="text">
         <h1>Chúc mừng sinh nhật em nhé</h1>
         <p class="name">Mong em hạnh phúc ❤</p>
