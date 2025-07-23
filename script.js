@@ -37,9 +37,9 @@ const messages = [
   { text: "3", color:"#00bfff", font: "bold 200px Times New Roman"  },
   { text: "2", color: "#00bfff", font: "bold 200px  Times New Roman" },
   { text: "1", color:"#00bfff", font: "bold 200px  Times New Roman"},
-  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 30px  Times New Roman" },
-  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 30px  Times New Roman" },
-  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 30px Times New Roman" }
+  { text: "Chúc mừng sinh nhật em nhé", color:"#00bfff", font: "bold 50px  Times New Roman" },
+  { text: "Chúc em tuổi mới hạnh phúc", color: "#00bfff", font: "bold 50px  Times New Roman" },
+  { text: "Luôn đạt nhiều mong ước trong cuộc sống", color: "#00bfff", font: "bold 50px Times New Roman" }
 ];
 
 let particles = [];
